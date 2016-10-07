@@ -29,13 +29,9 @@ used if it is supplied in the
 
 ```r
 # Basic workflow, default parameters
+library(geneAttribution)
 geneLocs <- geneModels() # Define gene models
 geneAttribution("chr2", 127156000, geneLocs) # Get candidate gene probabilities
-
-# Basic workflow, customized parameters
-library(TxDb.Hsapiens.UCSC.hg19.knownGene) # Load TxDB object containing gene models
-geneLocs <- geneModels(txdb=TxDb.Hsapiens.UCSC.hg19.knownGene, maxGeneLength=1e5) # Define gene models
-geneAttribution("chr2", 127156000, geneLocs, lambda=1.0e-5, maxDist=2e6, minPP=0) # Get candidate gene probabilities
 ```
 
 The most basic functionality assumes that the closer a gene is to the input
@@ -132,3 +128,18 @@ The `extdata` directory provides two .BED files in genome build GRCh38:
 
 Because both files are supplied as examples, they are limited to a 10 MB region
 (120,000,000-130,000,000) on chromosome 2.
+
+## Obtaining the coordinates of candidate genes
+The output of the `geneAttribution` function is a named numerical vector of
+candidate gene probabilities. In some instances, it may be useful to also know
+the coordinates of the candidate genes, as this annotation can help with
+further work with package results. It can easily be obtained by subsetting the
+gene models object.
+
+```r
+geneLocs <- geneModels()
+geneLocs <- geneModels() # Define gene models
+pp <- geneAttribution("chr2", 127156000, geneLocs, minPP=0) # Posterior prob.
+geneLocs[match(names(pp), geneLocs$symbol)] # Subset gene models
+```
+
