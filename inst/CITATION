@@ -1,0 +1,15 @@
+citHeader("Please cite the paper below when using geneAttribution")
+
+citEntry(
+	entry="article",	
+	author=c(person("Arthur", "Wuster"),
+        	person("Diana", "Chang"),
+		person("Timothy", "Behrens"),
+		person("Tushar", "Bhangale")),
+	title="geneAttribution: trait agnostic identification of candidate genes associated with noncoding variation",
+	journal="Bioinformatics",
+	volume=33,
+	number=4,
+	pages="599-600",
+	year=2017,
+	textVersion="Wuster, A., Chang, D., Behrens, T.W. and Bhangale, T. (2017). geneAttribution: trait agnostic identification of candidate genes associated with noncoding variation. Bioinformatics 33(4), 599-600")
