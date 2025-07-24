@@ -2,8 +2,8 @@ Package: geneAttribution
 Type: Package
 Title: Identification of candidate genes associated with genetic
         variation
-Version: 1.35.0
-Date: 2016-10-16
+Version: 1.35.1
+Date: 2025-07-24
 Author: Arthur Wuster
 Maintainer: Arthur Wuster <wustera@gene.com>
 Description: Identification of the most likely gene or genes through
@@ -17,7 +17,7 @@ License: Artistic-2.0
 biocViews: SNP, GenePrediction, GenomeWideAssociation,
         VariantAnnotation, GenomicVariation
 Imports: utils, GenomicRanges, org.Hs.eg.db, BiocGenerics,
-        GenomeInfoDb, GenomicFeatures, IRanges, rtracklayer
+        Seqinfo, GenomicFeatures, IRanges, rtracklayer
 Suggests: TxDb.Hsapiens.UCSC.hg38.knownGene,
         TxDb.Hsapiens.UCSC.hg19.knownGene, knitr, rmarkdown, testthat
 RoxygenNote: 5.0.1

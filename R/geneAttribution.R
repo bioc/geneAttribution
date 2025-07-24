@@ -44,7 +44,7 @@ geneModels <- function(txdb=TxDb.Hsapiens.UCSC.hg38.knownGene::TxDb.Hsapiens.UCS
 
     # Report gene number and genome build
     message("Gene models for ", length(geneLocs), " genes returned\n")
-    build <- GenomeInfoDb::genome(geneLocs)[1]
+    build <- Seqinfo::genome(geneLocs)[1]
     message("Gene models are in build ", build, "\n")
     return(geneLocs)
 }
