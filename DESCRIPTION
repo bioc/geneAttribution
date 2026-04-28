@@ -2,7 +2,7 @@ Package: geneAttribution
 Type: Package
 Title: Identification of candidate genes associated with genetic
         variation
-Version: 1.37.0
+Version: 1.38.0
 Date: 2025-07-24
 Author: Arthur Wuster
 Maintainer: Arthur Wuster <wustera@gene.com>
